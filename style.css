@@ -1,0 +1,249 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  height: 100vh;
+  width: 100%;
+}
+#heading {
+  text-align: center;
+  font-size: 1.5rem;
+}
+.main-heading {
+  position: absolute;
+  top: 2%;
+  left: 40%;
+}
+
+#budget-main {
+  height: 260px;
+  width: 300px;
+  background-color: rgb(235, 240, 243);
+  position: absolute;
+  top: 13%;
+  left: 18%;
+  padding: 20px;
+}
+
+.budget {
+  background-color: #fff;
+  border-radius: 10px;
+  height: 215px;
+  padding: 20px;
+}
+.budget input {
+  text-align: center;
+}
+
+.budget h1 {
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+}
+
+.budget input {
+  margin-bottom: 25px;
+  padding: 6px;
+  width: 95%;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+.budget button {
+  font-weight: bold;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background: rgba(39, 39, 185, 0.712);
+  font-size: 1.2rem;
+  padding: 12px 15px;
+}
+
+/* Budget Information */
+#star {
+  color: red;
+}
+.box input {
+  text-align: center;
+}
+
+#amount-info {
+  /* border: 2px solid green; */
+  background-color: rgb(235, 240, 243);
+  padding: 20px;
+  position: absolute;
+  top: 13%;
+  left: 45%;
+  height: 435px;
+  width: 30%;
+}
+
+.amount-details {
+  /* border: 2px solid black; */
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  height: 395px;
+}
+
+.amount-details h3 {
+  margin-bottom: 5px;
+  font-size: 1.2rem;
+}
+.amount-details input {
+  margin-bottom: 7px;
+  width: 100%;
+  padding: 8px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border: 0.5px solid black;
+}
+#Category {
+  margin-bottom: 10px;
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: 0.5px solid black;
+}
+
+.submit-btn {
+  padding: 12px 30px;
+  font-weight: bold;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background: rgba(39, 39, 185, 0.712);
+  font-size: 1.2rem;
+
+  position: absolute;
+  top: 375px;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+/* Display Expenses */
+#display-expenses {
+  height: 170px;
+  width: 60%;
+  position: absolute;
+  top: 660px;
+  background-color: rgb(235, 240, 243);
+  left: 48%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+}
+
+.expenses {
+  background-color: #fff;
+  display: flex;
+  border-radius: 10px;
+  height: 130px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.expenses h3 {
+  margin-bottom: 15px;
+  font-size: 2rem;
+  text-align: center;
+  margin-right: 50px;
+}
+.inputs {
+  padding: 22px;
+  font-size: 2rem;
+  height: 25%;
+  width: 80%;
+  border: 0.5px solid black;
+}
+
+/* Budget List */
+
+.header {
+  /* border: 2px solid black; */
+  height: 600px;
+  width: 95%;
+  position: absolute;
+  top: 23px;
+  left: 3%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  overflow: scroll;
+  box-sizing: border-box;
+  background-color: #fff;
+  border-radius: 10px;
+  overflow-x: hidden;
+}
+
+.main {
+  background-color: rgb(235, 240, 243);
+  height: 645px;
+  top: 800px;
+  width: 60%;
+  margin-left: 18%;
+  position: absolute;
+}
+.last-box {
+  height: 90vh;
+}
+
+.header h3 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.headings {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.heading {
+  font-size: 1.4rem;
+  font-weight: 800;
+  flex-basis: 25%;
+  text-align: center;
+}
+
+.list {
+  width: 100%;
+  padding: 5px;
+  display: flex;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 15px -9px,
+    rgba(0, 0, 0, 0.3) 0px 8px 10px;
+  margin-top: 20px;
+}
+
+.list .list-input-display {
+  height: 45px;
+  width: 100%;
+  box-sizing: border-box;
+  box-shadow: 2px 2px 2px 1px rgba(0.2, 0.2, 0.2, 0.2);
+  font-size: 1.7rem;
+  margin: 0 3px;
+  font-weight: bold;
+  text-align: center;
+  border: none;
+}
+
+footer {
+  margin-top: 50vh;
+  border-top: 1px solid black;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.4rem;
+  padding: 7px 0;
+}
+
+button:hover {
+  background: rgb(36, 36, 158);
+  transition: 0.6s;
+}

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Budget App</title>
+  </head>
+  <body>
+    <div id="heading">
+      <h1 class="main-heading">Budget App</h1>
+    </div>
+    <main>
+      <div id="budget-main">
+        <div class="budget">
+          <h1>Budget</h1>
+          <input
+            type="number"
+            id="amount-input"
+            placeholder="Enter Total Budget"
+          />
+          <br />
+          <button id="setBudgetBtn">Set Budget</button>
+        </div>
+      </div>
+
+      <!-- Budget Information -->
+      <div id="amount-info">
+        <div class="amount-details">
+          <h3>Total Amount<span id="star">*</span></h3>
+          <input type="number" placeholder="$" id="total-amount" />
+
+          <h3>Category<span id="star">*</span></h3>
+          <select name="cars" id="Category">
+            <option value="" disabled selected hidden>
+              Choose Categories...
+            </option>
+            <option value="Electronics">Electronics</option>
+            <option value="School Fee">School Fee</option>
+            <option value="Grocery">Grocery</option>
+            <option value="Milk">Milk</option>
+            <option value="Electricity Bill">Electricity Bill</option>
+            <option value="Gas Bill">Gas Bill</option>
+          </select>
+
+          <h3>Description</h3>
+          <input type="text" placeholder="Description" id="description" />
+
+          <h3>Date<span id="star">*</span></h3>
+          <input type="date" name="date" id="payment-date" />
+
+          <button class="submit-btn" id="submit-btn1">Submit</button>
+        </div>
+      </div>
+
+      <!-- Display Expenses  -->
+      <div id="display-expenses">
+        <div class="expenses">
+          <div class="box">
+            <h3>Total Budget</h3>
+            <input
+              class="inputs"
+              type="text"
+              id="total-budget"
+              placeholder="$ 0"
+            />
+          </div>
+
+          <div class="box">
+            <h3>Expenses</h3>
+            <input
+              class="inputs"
+              type="text"
+              id="expenses"
+              readonly
+              placeholder="$ 0"
+            />
+          </div>
+
+          <div class="box">
+            <h3>Balance</h3>
+            <input
+              class="inputs"
+              type="text"
+              id="remaining-balance"
+              readonly
+              placeholder="$ 0"
+            />
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- budget list -->
+    <div class="last-box">
+      <div class="main">
+        <div class="header">
+          <h3>Expenses List</h3>
+          <div class="headings">
+            <div class="heading" id="heading1">Category</div>
+            <div class="heading" id="heading2">Description</div>
+            <div class="heading" id="heading3">Amount</div>
+            <div class="heading" id="heading4">Date</div>
+          </div>
+
+          <div class="list-box"></div>
+        </div>
+      </div>
+    </div>
+    <footer>Wajahat Baloch</footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
