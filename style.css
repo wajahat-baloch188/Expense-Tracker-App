@@ -232,6 +232,7 @@ main {
   font-weight: bold;
   text-align: center;
   border: none;
+  background-color: aliceblue;
 }
 
 footer {
@@ -246,4 +247,18 @@ footer {
 button:hover {
   background: rgb(36, 36, 158);
   transition: 0.6s;
+}
+
+.delete-button {
+  border-radius: 1px;
+  padding: 0 10px;
+  height: 45px;
+  width: 50px;
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.delete-button:hover {
+  background: red;
+  color: #fff;
 }

@@ -87,11 +87,23 @@ function listBoxes() {
     }" />
     <input type="text" readonly class="list-input-display" id="list-display-4" value="${
       arr[arr.length - 1].paymentData
-    }" />`;
+    }" />
+    <button class="delete-button">×</button>`;
 
   newList.innerHTML = newInput;
-
   listBox.appendChild(newList);
 
+  const deleteButton = newList.querySelector(".delete-button");
+  deleteButton.addEventListener("click", function () {
+    newList.remove();
+    const index = Array.from(listBox.children).indexOf(newList);
+    deleteClick(index);
+  });
   listCount++;
+}
+
+function deleteClick(index) {
+  let removedItem = arr.splice(index, 1)[0].productPrice;
+  remainingBalance.value = +remainingBalance.value + removedItem;
+  expenses.value = +expenses.value - removedItem;
 }
