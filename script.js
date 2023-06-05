@@ -4,13 +4,14 @@ let inputAmountButton = document.getElementById("setBudgetBtn");
 let totalBudget = document.getElementById("total-budget");
 
 inputAmountButton.addEventListener("click", function inputButtonClicked() {
-  let inputValue = +inputAmount.value;
+  var inputValue = +inputAmount.value;
+
   if (inputValue > 0) {
     totalBudget.value = inputValue;
     remainingBalance.value = inputValue;
   } else {
-    alert("Please Enter a Valid Amount");
-    inputAmount.value = "";
+    alert("please Enter all valid Amount");
+    inputValue = "";
   }
 });
 
@@ -26,7 +27,6 @@ var paymentDate = document.getElementById("payment-date");
 let arr = [];
 
 submitButton.addEventListener("click", function submitButtonClicked() {
-  let inputValue = +inputAmount.value; // Assign the current value of inputAmount to inputValue
   let productPrice = +totalAmount.value;
   let categoryData = category.value;
   let descriptionData = description.value;
@@ -39,32 +39,29 @@ submitButton.addEventListener("click", function submitButtonClicked() {
     paymentData: paymentData,
   };
   arr.push(obj);
-
-  let inputTotalAmount = +totalAmount.value;
-
-  if (inputValue > 0) {
-    remainingBalance.value -= inputTotalAmount;
-    expenses.value = Number(expenses.value) + inputTotalAmount;
-
-    totalAmount.value = "";
-    category.value = "";
-    description.value = "";
-    paymentDate.value = "";
-  } else {
-    alert("Please enter a Budget");
-  }
 });
 
 // Dates, Category, description
 document.getElementById("submit-btn1").addEventListener("click", function () {
-  let inputValue = +inputAmount.value;
+  var category1 = document.getElementById("Category").value;
+  var paymentDate1 = document.getElementById("payment-date").value;
 
-  var category = document.getElementById("Category").value;
-  var paymentDate = document.getElementById("payment-date").value;
-  if (category != "" && paymentDate != "" && inputValue >= 0) {
-    listBoxes();
+  if (category1 === "" || paymentDate1 === "" || totalAmount < 0) {
+    totalAmount.value = "";
+    category.value = "";
+    description.value = "";
+    paymentDate.value = "";
+    alert("Please Enter all valid Information");
   } else {
-    alert("please Enter all required Information");
+    var inputTotalAmount = +totalAmount.value;
+
+    remainingBalance.value -= inputTotalAmount;
+    expenses.value = Number(expenses.value) + inputTotalAmount;
+    listBoxes();
+    totalAmount.value = "";
+    category.value = "";
+    paymentDate.value = "";
+    description.value = "";
   }
 });
 
