@@ -57,11 +57,14 @@ submitButton.addEventListener("click", function submitButtonClicked() {
 
 // Dates, Category, description
 document.getElementById("submit-btn1").addEventListener("click", function () {
-  let inputValue = +inputAmount.value; // Assign the current value of inputAmount to inputValue
+  let inputValue = +inputAmount.value;
+
+  var category = document.getElementById("Category").value;
+  var paymentDate = document.getElementById("payment-date").value;
   if (category != "" && paymentDate != "" && inputValue >= 0) {
     listBoxes();
   } else {
-    console.log("Not OK");
+    alert("please Enter all required Information");
   }
 });
 
