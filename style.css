@@ -310,6 +310,7 @@ button:hover {
     font-size: 1.1rem;
     width: 70%;
     margin-left: 15px;
+    padding: 2px;
   }
   .box {
     width: 40%;
